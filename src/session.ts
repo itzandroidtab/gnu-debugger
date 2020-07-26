@@ -344,6 +344,7 @@ export class GnuDebugSession extends DebugSession {
 			`-enable-pretty-printing`,
 			`-target-select extended-remote ${args.serverHost}:${args.serverPort}`,
 			`-file-exec-and-symbols "${args.program}"`,
+			`-file "${args.program}"`,
 			`-interpreter-exec console "monitor halt"`,
 			`-interpreter-exec console "monitor reset"`,
 			`-target-download`,
